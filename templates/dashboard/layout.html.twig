@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="Description" content="Xino - Laravel Admin & Dashboard Template">
+		<meta name="Author" content="Spruko Technologies Private Limited">
+		<meta name="Keywords" content="cryptocurrency, dashboard, admin, crypto, ico, bootstrap admin template, admin template, bootstrap dashboard template, crypto dashboard, cryptocurrency dashboard, ico dashboard, crypto admin, dashboard cryptocurrency, cryptocurrency trading dashboard, crypto dashboard template "/>
+
+		<!-- Title -->
+        <title>{% block title %}Dashboard | Crypto Bot{% endblock %}</title>
+
+        <link rel="icon" href="{{ '/favicon.ico' }}"/>
+
+        <!-- Font Awesome Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="{{ '/css/adminlte.min--.css' }}">
+        <!-- style -->
+        <link rel="stylesheet" href="{{ '/css/style---.css' }}">
+        <!-- Google Font: Source Sans Pro -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+
+
+
+
+		<!-- Icons css -->
+		<link href="{{ '/css/plugins/icons.css' }}" rel="stylesheet">
+
+		<!--  Right-sidemenu css -->
+		<link href="{{ '/css/plugins/sidebar.css' }}" rel="stylesheet">
+
+		<!--  Custom Scroll bar-->
+		<link href="{{ '/css/plugins/jquery.mCustomScrollbar.css' }}" rel="stylesheet"/>
+
+		<!--- Animations css-->
+		<link href="{{ '/css/plugins/animate.css' }}" rel="stylesheet">
+
+        
+		<!-- Internal Chart-Morris css-->
+        <link href="{{ '/css/plugins/morris.css' }}" rel="stylesheet">
+
+		<!-- Internal Nice-select css  -->
+		<link href="{{ '/css/plugins/nice-select.css' }}" rel="stylesheet"/>
+
+		<!-- Internal News-Ticker css-->
+		<link href="{{ '/css/plugins/flag-icon.min.css' }}" rel="stylesheet">
+
+		<!-- Jquery-countdown css-->
+		<link href="{{ '/css/plugins/countdown.css' }}" rel="stylesheet">
+
+		<!-- Internal News-Ticker css-->
+        <link href="{{ '/css/plugins/jquery.jConveyorTicker.css' }}" rel="stylesheet" />
+
+		<!-- style css-->
+		<link href="{{ '/css/plugins/style.css' }}" rel="stylesheet">
+
+		<!-- skin css-->
+		<link href="{{ '/css/plugins/skin-modes.css' }}" rel="stylesheet">
+
+		<!-- dark-theme css-->
+		<link href="{{ '/css/plugins/style-dark.css' }}" rel="stylesheet">
+
+		<!-- Switcher css -->
+		<link href="{{ '/css/plugins/switcher.css' }}" rel="stylesheet">
+		<link href="{{ '/css/plugins/demo.css' }}" rel="stylesheet">
+
+
+        {% block stylesheet %}{% endblock stylesheet %}
+
+        {% block head %}
+        {% endblock head %}
+	</head>
+	<body class="main-body app sidebar-mini Light-mode">
+
+		<!-- Loader -->
+		<div id="global-loader" class="light-loader">
+			<img src="https://laravel.spruko.com/xino/ltr/assets/img/loaders/loader.svg" class="loader-img" alt="Loader">
+		</div>
+		<!-- /Loader -->
+
+
+
+		<!-- Page -->
+		<div class="page">
+
+
+        <!-- main-header -->
+		<div class="main-header nav nav-item hor-header">
+			<div class="container">
+				<div class="main-header-left ">
+					<a class="animated-arrow hor-toggle horizontal-navtoggle"><span></span></a><!-- sidebar-toggle-->
+					<a class="header-brand" href="{{ '/' }}">
+						<img src="{{ '/img/bitcoin.svg' }}" alt="Crypto Trading Bot Logo--" class="brand-image img-circle elevation-1 desktop-dark"
+                        style="opacity: .8">
+                        <img src="{{ '/img/bitcoin.svg' }}" alt="Crypto Trading Bot Logo--" class="brand-image img-circle elevation-1 desktop-logo"
+                            style="opacity: .8">
+					</a>
+					
+				</div>
+				<div class="main-header-center">
+					<div class="responsive-logo">
+                        <img src="https://laravel.spruko.com/xino/ltr/assets/img/brand/logo.png" class="mobile-logo" alt="logo">
+                        <img src="https://laravel.spruko.com/xino/ltr/assets/img/brand/logo-theme-dark.png" class="dark-mobile-logo" alt="logo">
+					</div>
+				</div>
+				<div class="main-header-right">
+					
+				</div>
+			</div>
+		</div>
+		<!-- /main-header -->
+
+			<!-- mobile-header -->
+		<div class="responsive main-header">
+			<div class="mb-1 navbar navbar-expand-lg  nav nav-item  navbar-nav-right responsive-navbar navbar-dark d-sm-none ">
+				<div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+					<div class="d-flex order-lg-2 ml-auto">
+						<form class="navbar-form nav-item my-auto d-lg-none" role="search">
+							<div class="input-group nav-item my-auto">
+								<input type="text" class="form-control" placeholder="Search">
+								<span class="input-group-btn">
+									<button type="reset" class="btn btn-default">
+										<i class="ti-close"></i>
+									</button>
+									<button type="submit" class="btn btn-default nav-link">
+										<i class="ti-search"></i>
+									</button>
+								</span>
+							</div>
+						</form>
+						<div class="d-md-flex">
+							<div class="nav-item full-screen fullscreen-button">
+								<a class="new nav-link full-screen-link" href="#"><i class="ti-fullscreen"></i></span></a>
+							</div>
+						</div>
+						<div class="dropdown  nav-item main-header-message header-contact">
+							<a class="new nav-link" href="#" ><i class="ti-email"></i><span class=" pulse-danger"></span></a>
+							<div class="dropdown-menu dropdown-menu-arrow animated fadeInUp">
+								<div class="main-dropdown-header d-sm-none">
+									<a class="main-header-arrow" href=""><i class="icon ion-md-arrow-back"></i></a>
+								</div>
+								<div class="menu-header-content text-left d-flex">
+									<div class="">
+										<h6 class="menu-header-title text-white mb-0">5 new Messages</h6>
+									</div>
+									<div class="my-auto ml-auto">
+										<span class="badge badge-pill badge-warning float-right">Mark All Read</span>
+									</div>
+								</div>
+								<div class="main-message-list text-scroll">
+									<a href="#" class="p-3 d-flex border-bottom">
+										<div class="  drop-img  cover-image  " data-image-src="https://laravel.spruko.com/xino/ltr/assets/img/faces/3.jpg">
+											<span class="avatar-status bg-teal"></span>
+										</div>
+
+										<div class="wd-90p">
+											<div class="d-flex">
+												<h5 class="mb-1 name">Paul Molive</h5>
+												<p class="time mb-0 text-right ml-auto float-right">10 min ago</p>
+											</div>
+											<p class="mb-0 desc">I'm sorry but i'm not sure how...</p>
+										</div>
+									</a>
+									<a href="#" class="p-3 d-flex border-bottom">
+										<div class="drop-img cover-image" data-image-src="https://laravel.spruko.com/xino/ltr/assets/img/faces/2.jpg">
+											<span class="avatar-status bg-teal"></span>
+										</div>
+										<div class="wd-90p">
+											<div class="d-flex">
+												<h5 class="mb-1 name">Sahar Dary</h5>
+												<p class="time mb-0 text-right ml-auto float-right">13 min ago</p>
+											</div>
+											<p class="mb-0 desc">All set ! Now, time to get to you now......</p>
+										</div>
+									</a>
+									<a href="#" class="p-3 d-flex border-bottom">
+										<div class="drop-img cover-image" data-image-src="https://laravel.spruko.com/xino/ltr/assets/img/faces/9.jpg">
+											<span class="avatar-status bg-teal"></span>
+										</div>
+										<div class="wd-90p">
+											<div class="d-flex">
+												<h5 class="mb-1 name">Khadija Mehr</h5>
+												<p class="time mb-0 text-right ml-auto float-right">20 min ago</p>
+											</div>
+											<p class="mb-0 desc">Are you ready to pickup your Delivery...</p>
+										</div>
+									</a>
+									<a href="#" class="p-3 d-flex border-bottom">
+										<div class="drop-img cover-image" data-image-src="https://laravel.spruko.com/xino/ltr/assets/img/faces/12.jpg">
+											<span class="avatar-status bg-danger"></span>
+										</div>
+										<div class="wd-90p">
+											<div class="d-flex">
+												<h5 class="mb-1 name">Barney Cull</h5>
+												<p class="time mb-0 text-right ml-auto float-right">30 min ago</p>
+											</div>
+											<p class="mb-0 desc">Here are some products ...</p>
+										</div>
+									</a>
+									<a href="#" class="p-3 d-flex border-bottom">
+										<div class="drop-img cover-image" data-image-src="https://laravel.spruko.com/xino/ltr/assets/img/faces/5.jpg">
+											<span class="avatar-status bg-teal"></span>
+										</div>
+										<div class="wd-90p">
+											<div class="d-flex">
+												<h5 class="mb-1 name">Petey Cruiser</h5>
+												<p class="time mb-0 text-right ml-auto float-right">35 min ago</p>
+											</div>
+											<p class="mb-0 desc">I'm sorry but i'm not sure how...</p>
+										</div>
+									</a>
+								</div>
+								<div class="text-center dropdown-footer">
+									<a href="text-center">VIEW ALL</a>
+								</div>
+							</div>
+						</div>
+						<div class="dropdown nav-item main-header-notification">
+							<a class="new nav-link" href="#"><i class="ti-bell "></i><span class=" pulse"></span></a>
+							<div class="dropdown-menu dropdown-menu-arrow animated fadeInUp">
+								<div class="menu-header-content text-left d-flex">
+									<div class="">
+										<h6 class="menu-header-title text-white mb-0">7 new Notifications</h6>
+									</div>
+									<div class="my-auto ml-auto">
+										<span class="badge badge-pill badge-warning float-right">Mark All Read</span>
+									</div>
+								</div>
+								<div class="main-notification-list notify-scroll">
+									<a class="d-flex p-3 border-bottom" href="#">
+										<div class="notifyimg bg-success-transparent">
+											<i class="la la-shopping-basket text-success"></i>
+										</div>
+										<div class="ml-3">
+											<h5 class="notification-label mb-1">New Order Received</h5>
+											<div class="notification-subtext">1 hour ago</div>
+										</div>
+										<div class="ml-auto" >
+											<i class="las la-angle-right text-right text-muted"></i>
+										</div>
+									</a>
+									<a class="d-flex p-3 border-bottom" href="#">
+										<div class="notifyimg bg-danger-transparent">
+											<i class="la la-user-check text-danger"></i>
+										</div>
+										<div class="ml-3">
+											<h5 class="notification-label mb-1">22 verified registrations</h5>
+											<div class="notification-subtext">2 hour ago</div>
+										</div>
+										<div class="ml-auto" >
+											<i class="las la-angle-right text-right text-muted"></i>
+										</div>
+									</a>
+									<a class="d-flex p-3 border-bottom" href="#">
+										<div class="notifyimg bg-primary-transparent">
+											<i class="la la-check-circle text-primary"></i>
+										</div>
+										<div class="ml-3">
+											<h5 class="notification-label mb-1">Project has been approved</h5>
+											<div class="notification-subtext">4 hour ago</div>
+										</div>
+										<div class="ml-auto" >
+											<i class="las la-angle-right text-right text-muted"></i>
+										</div>
+									</a>
+									<a class="d-flex p-3 border-bottom" href="#">
+										<div class="notifyimg bg-pink-transparent">
+											<i class="la la-file-alt text-pink"></i>
+										</div>
+										<div class="ml-3">
+											<h5 class="notification-label mb-1">New files available</h5>
+											<div class="notification-subtext">10 hour ago</div>
+										</div>
+										<div class="ml-auto" >
+											<i class="las la-angle-right text-right text-muted"></i>
+										</div>
+									</a>
+									<a class="d-flex p-3 border-bottom" href="#">
+										<div class="notifyimg bg-warning-transparent">
+											<i class="la la-envelope-open text-warning"></i>
+										</div>
+										<div class="ml-3">
+											<h5 class="notification-label mb-1">New review received</h5>
+											<div class="notification-subtext">1 day ago</div>
+										</div>
+										<div class="ml-auto" >
+											<i class="las la-angle-right text-right text-muted"></i>
+										</div>
+									</a>
+									<a class="d-flex p-3" href="#">
+										<div class="notifyimg bg-purple-transparent">
+											<i class="la la-gem text-purple"></i>
+										</div>
+										<div class="ml-3">
+											<h5 class="notification-label mb-1">Updates Available</h5>
+											<div class="notification-subtext">2 days ago</div>
+										</div>
+										<div class="ml-auto" >
+											<i class="las la-angle-right text-right text-muted"></i>
+										</div>
+									</a>
+								</div>
+								<div class="dropdown-footer">
+									<a href="">VIEW ALL</a>
+								</div>
+							</div>
+						</div>
+						<div class="dropdown main-profile-menu nav nav-item nav-link">
+							<a class="profile-user" href=""><img alt="" src="https://laravel.spruko.com/xino/ltr/assets/img/faces/5.jpg"></a>
+							<div class="dropdown-menu dropdown-menu-arrow animated fadeInUp">
+								<div class="main-header-profile header-img">
+									<div class="main-img-user"><img alt="" src="https://laravel.spruko.com/xino/ltr/assets/img/faces/5.jpg"></div>
+									<h6>Elizabeth Jane</h6><span>Premium Member</span>
+								</div>
+								<a class="dropdown-item" href=""><i class="far fa-user"></i> My Profile</a>
+								<a class="dropdown-item" href=""><i class="far fa-edit"></i> Edit Profile</a>
+								<a class="dropdown-item" href=""><i class="far fa-clock"></i> Activity Logs</a>
+								<a class="dropdown-item" href=""><i class="fas fa-sliders-h"></i> Account Settings</a>
+								<a class="dropdown-item" href="https://laravel.spruko.com/xino/ltr/page-signin"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+							</div>
+						</div>
+						<div class="dropdown main-header-message right-toggle">
+							<a class="nav-link " data-toggle="sidebar-right" data-target=".sidebar-right">
+								<i class="ti-menu tx-20 bg-transparent"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- mobile-header -->
+
+			<!--Horizontal-main -->
+		<div class="sticky">
+			<div class="horizontal-main hor-menu clearfix side-header">
+				<div class="horizontal-mainwrapper container clearfix">
+					<!--Nav-->
+					<nav class="horizontalMenu clearfix">
+						<ul class="horizontalMenu-list">
+							<li class="nav-item">
+								<a href="{{ '/' }}" class="nav-link">Dashboard</a>
+							</li>
+							<li class="nav-item">
+								<a href="{{ '/trades' }}" class="nav-link">Trades</a>
+							</li>
+							<li class="nav-item">
+								<a href="{{ '/pairs' }}" class="nav-link">Pairs</a>
+							</li>
+							<li class="nav-item">
+								<a href="{{ '/orders' }}" class="nav-link">Orders</a>
+							</li>
+							<li class="nav-item">
+								<a href="{{ '/signals' }}" class="nav-link">Signals</a>
+							</li>
+							<li class="nav-item">
+								<a href="{{ '/tools/candles' }}" class="nav-link">Candles</a>
+							</li>
+							<li class="nav-item">
+								<a href="{{ '/backtest' }}" class="nav-link">Backtest</a>
+							</li>
+							<li class="nav-item">
+								<a href="{{ '/logs' }}" class="nav-link">Logs</a>
+							</li>
+		
+							{% set desks = desks() %}
+							{% if desks|length > 0 %}
+								<li class="nav-item dropdown">
+									<a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Desks</a>
+									<ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+										{% for desk in desks %}
+											<li><a href="/desks/{{ loop.index - 1 }}" class="dropdown-item">{{ desk }} </a></li>
+										{% endfor %}
+		
+										<div class="dropdown-divider"></div>
+		
+										{% for desk in desks %}
+											<li><a href="/desks/{{ loop.index - 1 }}/fullscreen" class="dropdown-item"><i class="fas fa-expand text-sm text-muted"></i> &nbsp; {{ desk }}</a></li>
+										{% endfor %}
+									</ul>
+								</li>
+							{% endif %}
+						</ul>
+					</nav>
+					<!--Nav-->
+				</div>
+			</div>
+		</div>
+		<!--Horizontal-main -->
+
+			<!-- main-content opened -->
+			<div class="main-content horizontal-content">
+
+				<!-- container -->
+                {% block content %}
+                {% endblock content %}
+				<!-- Container closed -->
+
+			</div>
+			<!-- main-content closed -->
+
+			<!-- Right-sidebar-->
+		<div class="sidebar sidebar-right sidebar-animate">
+			<div class="p-3">
+				<a href="#" class="text-right float-right" data-toggle="sidebar-right" data-target=".sidebar-right"><i class="fe fe-x"></i></a>
+			</div>
+			<div class="tab-menu-heading border-0 card-header">
+				<div class="card-title mb-0">Notifications</div>
+				<div class="card-options ml-auto">
+					<a href="#" class="sidebar-remove"><i class="fe fe-x"></i></a>
+				</div>
+			</div>
+			<div class="tabs-menu ">
+				<!-- Tabs -->
+				<ul class="nav panel-tabs">
+					<li class=""><a href="#tab" class="active show" data-toggle="tab">Profile</a></li>
+					<li class=""><a href="#tab1" data-toggle="tab" class="">Friends</a></li>
+					<li><a href="#tab2" data-toggle="tab" class="">Activity</a></li>
+					<li><a href="#tab3" data-toggle="tab" class="">Todo</a></li>
+				</ul>
+			</div>
+			
+		</div>
+		<!-- Right-sidebar-closed -->
+			
+			<!-- Footer opened -->
+			<div class="main-footer ht-40">
+				<div class="container-fluid pd-t-0-f ht-100p">
+					<span>Copyright © 2021  test All rights reserved.</span>
+				</div>
+			</div>
+			<!-- Footer closed -->
+		</div>
+		<!--end  Page -->
+
+        <!-- Back-to-top -->
+		<a href="#top" id="back-to-top"><i class="la la-chevron-up"></i></a>
+
+
+
+        <!-- REQUIRED SCRIPTS -->
+
+        <!-- jQuery -->
+        <script src="{{ '/js/plugins/jquery.min.js' }}"></script>
+        <!-- Bootstrap 4 -->
+        <script src="{{ '/js/plugins/bootstrap.bundle.min.js' }}"></script>
+        <!-- AdminLTE App -->
+        <script src="{{ '/js/adminlte.min.js' }}"></script>
+
+
+<!-- Ionicons js-->
+		<script src="{{ '/js/plugins/ionicons.js' }}"></script>
+
+<!-- Moment js -->
+<script src="https://laravel.spruko.com/xino/ltr/assets/plugins/moment/moment.js"></script>
+
+<!-- P-scroll js -->
+<script src="https://laravel.spruko.com/xino/ltr/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="https://laravel.spruko.com/xino/ltr/assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+<!-- Rating js-->
+<script src="https://laravel.spruko.com/xino/ltr/assets/plugins/rating/jquery.rating-stars.js"></script>
+<script src="https://laravel.spruko.com/xino/ltr/assets/plugins/rating/jquery.barrating.js"></script>
+
+<!-- Custom Scroll bar Js-->
+<script src="https://laravel.spruko.com/xino/ltr/assets/plugins/mscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<!-- Horizontalmenu js-->
+<script src="https://laravel.spruko.com/xino/ltr/assets/plugins/horizontal-menu/horizontal-menu.js"></script>
+
+<!-- Right-sidebar js -->
+<script src="https://laravel.spruko.com/xino/ltr/assets/plugins/sidebar/sidebar.js"></script>
+<script src="https://laravel.spruko.com/xino/ltr/assets/plugins/sidebar/sidebar-custom.js"></script>
+
+<!-- Sticky js-->
+<script src="https://laravel.spruko.com/xino/ltr/assets/js/sticky.js"></script>
+
+<!-- eva-icons js -->
+<script src="https://laravel.spruko.com/xino/ltr/assets/js/eva-icons.min.js"></script>
+
+
+<!-- Datepicker js -->
+<script src="https://laravel.spruko.com/xino/ltr/assets/plugins/jquery-ui/ui/widgets/datepicker.js"></script>
+
+<!--Chart bundle min js -->
+<script src="https://laravel.spruko.com/xino/ltr/assets/plugins/chart.js/Chart.bundle.min.js"></script>
+<script src="https://laravel.spruko.com/xino/ltr/assets/plugins/raphael/raphael.min.js"></script>
+<script src="https://laravel.spruko.com/xino/ltr/assets/plugins/peity/jquery.peity.min.js"></script>
+
+<!-- JQuery sparkline js -->
+<script src="https://laravel.spruko.com/xino/ltr/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+<!-- Sampledata js -->
+<script src="https://laravel.spruko.com/xino/ltr/assets/js/chart.flot.sampledata.js"></script>
+
+<!-- Perfect-scrollbar js -->
+<script src="https://laravel.spruko.com/xino/ltr/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="https://laravel.spruko.com/xino/ltr/assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+<!-- Internal  Flot js-->
+<script src="https://laravel.spruko.com/xino/ltr/assets/plugins/jquery.flot/jquery.flot.js"></script>
+<script src="https://laravel.spruko.com/xino/ltr/assets/plugins/jquery.flot/jquery.flot.pie.js"></script>
+<script src="https://laravel.spruko.com/xino/ltr/assets/plugins/jquery.flot/jquery.flot.categories.js"></script>
+<script src="https://laravel.spruko.com/xino/ltr/assets/js/dashboard.sampledata.js"></script>
+<script src="https://laravel.spruko.com/xino/ltr/assets/js/chart.flot.sampledata.js"></script>
+
+<!-- Internal Newsticker js-->
+<script src="https://laravel.spruko.com/xino/ltr/assets/plugins/newsticker/jquery.jConveyorTicker.js"></script>
+<script src="https://laravel.spruko.com/xino/ltr/assets/js/newsticker.js"></script>
+
+<!-- Internal Nice-select js-->
+<script src="{{ '/js/plugins/jquery.nice-select.js' }}"></script>
+<script src="{{ '/js/plugins/nice-select.js' }}"></script>
+
+<!-- index js -->
+<script src="{{ '/js/plugins/dashboard.js' }}"></script>
+
+
+<!-- Custom js-->
+<script src="{{ '/js/plugins/custom.js' }}"></script>
+
+<!-- Switcher js -->
+<script src="{{ '/js/plugins/switcher.js' }}"></script>
+
+        <script>
+            // Add Active Navigation Class Based on URL to Menu Item
+            $(function () {
+                let path = window.location.href; // because the 'href' property of the DOM element is the absolute path
+                $('#navbarNav ul a').each(function() {
+                    if (this.href === path) {
+                        $(this).addClass('active');
+                    }
+                });
+            })
+        </script>
+        {% block javascript %}{% endblock javascript %}
+
+
+
+	</body>
+</html>
